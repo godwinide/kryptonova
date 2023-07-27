@@ -121,6 +121,10 @@ const UserSchema = new Schema({
         required: false,
         default: 0
     },
+    withdrawal_status: {
+        type: Boolean,
+        required: false
+    },
     first_transaction: {
         type: Number,
         required: false,

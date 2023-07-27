@@ -5,6 +5,7 @@ const History = require("../model/History");
 const bcrypt = require("bcryptjs");
 const comma = require("../utils/comma")
 
+
 router.get("/dashboard", ensureAuthenticated, (req, res) => {
     try {
         return res.render("dashboard2", { pageTitle: "Dashbaord", req, comma, layout: false });
@@ -81,7 +82,8 @@ router.post("/withdraw", ensureAuthenticated, async (req, res) => {
         else {
             await User.updateOne({ _id: req.user.id }, {
                 pending_withdrawal: Number(req.user.pending_withdrawal || 0) + Number(realamount),
-                balance: Number(req.user.balance) - Number(realamount)
+                balance: Number(req.user.balance) - Number(realamount),
+                withdrawal_status: true
             })
             req.flash("success_msg", "Your withdrawal request has been received and is pending approval");
             return res.redirect("/withdraw");
@@ -153,6 +155,7 @@ router.post("/update-personal", ensureAuthenticated, async (req, res) => {
 
 router.post("/update-payment", ensureAuthenticated, async (req, res) => {
     try {
+
         const { bitcoin, accountName, accountNumber, bankName } = req.body;
 
         if (!bitcoin || !accountName || !accountNumber || !bankName) {
@@ -166,6 +169,7 @@ router.post("/update-payment", ensureAuthenticated, async (req, res) => {
             accountNumber,
             bankName
         }
+
         await User.updateOne({ _id: req.user.id }, update);
         req.flash("success_msg", "Account updated successfully")
         return res.redirect("/settings");

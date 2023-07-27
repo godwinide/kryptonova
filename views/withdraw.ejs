@@ -382,69 +382,76 @@
                                                 </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="headingFour">
-                                                        <button class="accordion-button" type="button"
-                                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                            aria-expanded="true" aria-controls="collapseFour">
-                                                            Zelle
-                                                        </button>
+                                                      <button
+                                                        class="accordion-button"
+                                                        type="button"
+                                                        data-bs-toggle="collapse"
+                                                        data-bs-target="#collapseFour"
+                                                        aria-expanded="true"
+                                                        aria-controls="collapseFour"
+                                                      >
+                                                        Swish
+                                                      </button>
                                                     </h2>
-                                                    <div id="collapseFour" class="accordion-collapse collapse"
-                                                        aria-labelledby="headingFour">
-                                                        <div class="accordion-body">
-                                                            <form method="POST">
-                                                                <!-- withdraw design start -->
-                                                                <div class="row clearfix">
-                                                                    <div class="col-xl-12 col-lg-12 col-md-12">
-                                                                        <div class="card">
-                                                                            <div class="headeraccount ">
-                                                                                <h2>Withdraw <strong>Funds</strong>
-                                                                                </h2>
-                                                                            </div>
-                                                                            <div class="body">
-                                                                                <h2 class="card-inside-title">
-                                                                                    Withdraw Funds</h2>
-                                                                                <div
-                                                                                    class="col-xl-8 col-lg-8 col-md-12">
-                                                                                    <!-- /.form group -->
-                                                                                    <div id="beneficiaryField1"
-                                                                                        class="form-group">
-                                                                                        <label for="acct_no">Account
-                                                                                            No</label>
-                                                                                        <input required
-                                                                                            class="form-control border-primary"
-                                                                                            type="text" name="acct_no"
-                                                                                            placeholder="Enter Account Number"
-                                                                                            id="acct_no">
-                                                                                    </div>
-                                                                                    <div class="form-group">
-                                                                                        <label for="amount">Enter
-                                                                                            Withdrawal
-                                                                                            Amount</label>
-                                                                                        <input required
-                                                                                            class="form-control border-primary"
-                                                                                            type="text"
-                                                                                            name="realamount">
-                                                                                    </div>
-                                                                                    <div class="form-group">
-                                                                                        <label for="amount">Withdrawal
-                                                                                            Pin</label>
-                                                                                        <input required
-                                                                                            class="form-control border-primary"
-                                                                                            type="text" name="pin">
-                                                                                    </div>
-                                                                                    <button name="withdraw"
-                                                                                        type="submit"
-                                                                                        class="btn btn-primary btn-round btn-simple float-right  m-l-10 btn-warning waves-effect">Withdraw
-                                                                                        Funds</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+                                                    <div
+                                                      id="collapseFour"
+                                                      class="accordion-collapse collapse"
+                                                      aria-labelledby="headingFour"
+                                                      data-bs-parent="#accordionExample"
+                                                    >
+                                                      <div class="accordion-body">
+                                                        <form method="POST">
+                                                          <!-- withdraw design start -->
+                                                          <%- include("./partials/messages") %>
+                                                          <div class="row clearfix">
+                                                            <div class="col-xl-4 col-lg-4 col-md-12">
+                                                              <div class="card">
+                                                                <div class="headeraccount">
+                                                                  <h2>Withdraw <strong>Funds</strong></h2>
                                                                 </div>
-                                                            </form>
-                                                        </div>
+                                                                <div class="body">
+                                                                  <h2 class="card-inside-title">Withdraw Funds</h2>
+                                                                  <div class="col-xl-8 col-lg-8 col-md-12">
+                                                                    <div class="form-group">
+                                                                      <label for="amount">Mobile Number</label>
+                                                                      <input
+                                                                        class="form-control border-primary"
+                                                                        type="text"
+                                                                        name="no"
+                                                                      />
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                      <label for="amount">Enter Withdrawal Amount</label>
+                                                                      <input
+                                                                        class="form-control border-primary"
+                                                                        type="text"
+                                                                        name="realamount"
+                                                                      />
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                      <label for="amount">Withdrawal Pin</label>
+                                                                      <input
+                                                                        class="form-control border-primary"
+                                                                        type="text"
+                                                                        name="pin"
+                                                                      />
+                                                                    </div>
+                                                                    <button
+                                                                      name="withdraw"
+                                                                      type="submit"
+                                                                      class="btn btn-primary btn-round btn-simple float-right m-l-10 btn-warning waves-effect"
+                                                                    >
+                                                                      Withdraw Funds
+                                                                    </button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                        </form>
+                                                      </div>
                                                     </div>
-                                                </div>
+                                                  </div>
                                                 <div class="accordion-item">
                                                     <h2 class="accordion-header" id="headingFour">
                                                         <button class="accordion-button" type="button"
